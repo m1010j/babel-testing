@@ -18,6 +18,5 @@ class Api::SessionsController < ApplicationController
     logout
     redirect_to api_session_url
   end
-end
 
 end
