@@ -13,10 +13,14 @@ function Surrogate() {}
 Surrogate.prototype = React.Component.prototype;
 Thing.prototype = new Surrogate();
 Thing.prototype.constructor = Thing;
+Thing.prototype.handleSubmit = function (e) {
+  e.preventDefault();
+  this.props.login(this.state);
+};
 Thing.prototype.render = function () {
   return (<div>
     Please Sign Up
-    <form>
+    <form onSubmit={this.handleSubmit.bind(this)}>
 
       <label>Username:
         <input type="text" value={this.state.username}
