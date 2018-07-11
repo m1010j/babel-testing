@@ -13,6 +13,25 @@ document.addEventListener("DOMContentLoaded", () => {
   //     </div>
   //   )
   // }
+  class Animal {
+    constructor(name) {
+      this.name = name;
+    }
+  }
+
+  class Jeff extends Animal {
+    constructor(name, age) {
+      super(name)
+      this.age = age;
+    }
+
+    speak() {
+      console.log(`${this.name} is sad about being ${this.age}`);
+    }
+  }
+
+  const j = new Jeff("jeff", 69)
+  j.speak();
   const root = document.getElementById('root');
   const store = configureStore();
   window.login = SessionApiUtil.login;
