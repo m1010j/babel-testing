@@ -30,7 +30,7 @@ export const signup = (user) => {
         return dispatch(receiveCurrentUser(user));
         },
       (errors) => {
-        return dispatch(receiveErrors(errors.responseJSON));
+        return dispatch(receiveSessionErrors(errors.responseJSON));
         }
     );
   };
@@ -43,7 +43,7 @@ export const login = (user) => {
         return dispatch(receiveCurrentUser(user));
         },
       (errors) => {
-        return dispatch(receiveErrors(errors.responseJSON));
+        return dispatch(receiveSessionErrors(errors.responseJSON));
         }
     );
   };
