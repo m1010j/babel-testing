@@ -1,5 +1,5 @@
 import React from 'react';
-// import { withRouter, Link } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 
 // class LoginForm extends React.Component {
@@ -62,8 +62,8 @@ import React from 'react';
 // }
 //
 // export default withRouter(LoginForm);
-export default function Thing() {
+export default withRouter(function Thing() {
   return (
     <h1>we in here</h1>
   );
-};
+});
