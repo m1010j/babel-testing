@@ -12,26 +12,26 @@ class Thing extends React.Component {
   //   this.handleSubmit = this.handleSubmit.bind(this);
   // }
 
-  handleSubmit(e) {
-    e.preventDefault();
-    this.props.login(this.state);
-  }
+  // handleSubmit(e) {
+  //   e.preventDefault();
+  //   this.props.login(this.state);
+  // }
+  //
+  // update(field) {
+  //   return e => this.setState({
+  //     [field]: e.currentTarget.value
+  //   });
+  // }
 
-  update(field) {
-    return e => this.setState({
-      [field]: e.currentTarget.value
-    });
-  }
-
-  renderErrors() {
-    return (
-      <ul>
-        {this.props.errors.map((error, idx) => (
-          <li key={`error-${idx}`}>{error}</li>
-        ))}
-      </ul>
-    );
-  }
+  // renderErrors() {
+  //   return (
+  //     <ul>
+  //       {this.props.errors.map((error, idx) => (
+  //         <li key={`error-${idx}`}>{error}</li>
+  //       ))}
+  //     </ul>
+  //   );
+  // }
 
 
   render() {
