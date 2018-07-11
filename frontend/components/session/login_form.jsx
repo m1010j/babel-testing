@@ -64,6 +64,6 @@ import { withRouter, Link } from 'react-router-dom';
 // export default withRouter(LoginForm);
 export default withRouter(function Thing() {
   return (
-    <h1>we in here</h1>
+    <Link to="/your_mum">we in here</Link>
   );
 });
