@@ -3,14 +3,14 @@ import { withRouter, Link } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 
 class Thing extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      username: "",
-      password: ""
-    };
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     username: "",
+  //     password: ""
+  //   };
+  //   this.handleSubmit = this.handleSubmit.bind(this);
+  // }
 
   handleSubmit(e) {
     e.preventDefault();
