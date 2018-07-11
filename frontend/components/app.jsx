@@ -6,7 +6,7 @@ import SignupFormContainer from './session/signup_form_container';
 const App = () => (
   <div>
     <h1>IKE! by Bogdan</h1>
-    <Route path="/login" render={props => <h1>login</h1>} />
+    <Route path="/login" render={LoginFormContainer} />
   <Route path="/signup" render={props => <h2>signup</h2>} />
   </div>
 );
