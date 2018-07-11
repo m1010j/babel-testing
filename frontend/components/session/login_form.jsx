@@ -2,8 +2,11 @@ import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 function Thing(props) {
-  console.log('fuck');
   React.Component.call(this, props);
+  this.state = {
+    username: "",
+    password: ""
+  }
 }
 
 function Surrogate() {}
@@ -11,11 +14,35 @@ Surrogate.prototype = React.Component.prototype;
 Thing.prototype = new Surrogate();
 Thing.prototype.constructor = Thing;
 Thing.prototype.render = function () {
-  console.log('what');
-  return (
-    <Link to="/your_mum">we in here</Link>
-  );
+  return (<div>
+    Please Sign Up
+    <form>
+
+      <label>Username:
+        <input type="text" value={this.state.username}
+          onChange={this.update("username")}
+        />
+      </label>
+
+      <label>Password:
+        <input type="password" value={this.state.password}
+          onChange={this.update("password")}
+        />
+      </label>
+
+
+      <input type="submit" value="Sign Up" />
+    </form>
+
+    <Link to="/login">Already on Ike!? Log in</Link>
+  </div>);
 };
+
+Thing.prototype.update = function(field) {
+  return e => this.setState({
+    [field]: e.currentTarget.value
+  });
+}
 // class Thing {
 //   // constructor(props) {
 //   //   super(props);
@@ -26,16 +53,12 @@ Thing.prototype.render = function () {
 //   //   this.handleSubmit = this.handleSubmit.bind(this);
 //   // }
 //
-//   // handleSubmit(e) {
-//   //   e.preventDefault();
-//   //   this.props.login(this.state);
-//   // }
+  // handleSubmit(e) {
+  //   e.preventDefault();
+  //   this.props.login(this.state);
+  // }
 //   //
-//   // update(field) {
-//   //   return e => this.setState({
-//   //     [field]: e.currentTarget.value
-//   //   });
-//   // }
+
 //
 //   // renderErrors() {
 //   //   return (
