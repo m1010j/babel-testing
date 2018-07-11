@@ -1,8 +1,22 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
+function Thing(props) {
+  console.log('fuck');
+  React.Component.call(this, props);
+}
 
-// class Thing extends React.Component {
+function Surrogate() {}
+Surrogate.prototype = React.Component.prototype;
+Thing.prototype = new Surrogate();
+Thing.prototype.constructor = Thing;
+Thing.prototype.render = function () {
+  console.log('what');
+  return (
+    <Link to="/your_mum">we in here</Link>
+  );
+};
+// class Thing {
 //   // constructor(props) {
 //   //   super(props);
 //   //   this.state = {
@@ -35,14 +49,8 @@ import { withRouter, Link } from 'react-router-dom';
 //
 //
 //   render() {
-//     return (
-//       <Link to="/your_mum">we in here</Link>
-//     );
+//
 //   }
 // }
 
-export default withRouter(function Thing() {
-  return (
-    <Link to="/your_mum">we in here</Link>
-  )
-});
+export default withRouter(Thing);
