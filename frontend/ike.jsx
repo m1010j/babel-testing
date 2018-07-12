@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import * as SessionApiUtil from './util/session_api_util';
 import configureStore from './store/store';
 import Root from './components/root';
+import { merge } from 'lodash';
+
 
 document.addEventListener("DOMContentLoaded", () => {
   // const Test = function({store}) {
@@ -13,25 +15,29 @@ document.addEventListener("DOMContentLoaded", () => {
   //     </div>
   //   )
   // }
-  class Animal {
-    constructor(name) {
-      this.name = name;
-    }
-  }
+  // class Animal {
+  //   constructor(name) {
+  //     this.name = name;
+  //   }
+  // }
 
-  class Jeff extends Animal {
-    constructor(name, age) {
-      super(name)
-      this.age = age;
-    }
+  // class Jeff extends Animal {
+  //   constructor(name, age) {
+  //     super(name)
+  //     this.age = age;
+  //   }
 
-    speak() {
-      console.log(`${this.name} is sad about being ${this.age}`);
-    }
-  }
+  //   speak() {
+  //     console.log(`${this.name} is sad about being ${this.age}`);
+  //   }
+  // }
 
-  const j = new Jeff("jeff", 69)
-  j.speak();
+  // const j = new Jeff("jeff", 69)
+  // j.speak();
+
+  const newObj = merge({}, {});
+  console.log(newObj);
+
   const root = document.getElementById('root');
   const store = configureStore();
   window.login = SessionApiUtil.login;
